@@ -1,11 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>NASA Project</title>
     
+    <link rel="stylesheet" href="src/output.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+        }
+    </style>
+</head>
+<body class="bg-white antialiased">
+
+    <div class="w-full min-h-screen flex flex-col relative">
+        
+        <nav class="bg-black py-3 px-8 flex justify-between items-center relative min-h-[90px] z-10 w-full">
+            
+            <div class="flex items-center z-10 gap-2">
+                <button id="exploreToggle" 
+                        class="bg-transparent border-[3px] border-transparent rounded-none 
+                               p-2 flex items-center gap-1.5 cursor-pointer 
+                               transition-all duration-150 outline-none">
+                    <span class="text-white text-xl font-[900]">Explore</span>
+                    <img src="img/white arrow.png" alt="arrow" class="h-3.5 w-3.5">
+                </button>
+
+                <div class="flex items-center">
+                    <input id="searchToggle" type="text" placeholder="Search" 
+                           class="bg-transparent border-2 border-neutral-700 text-neutral-500 
+                                  text-sm font-bold px-4 py-0 h-7 rounded-none placeholder-neutral-600 
+                                  focus:outline-none w-44 transition-all duration-150" />
+                </div>
+            </div>
+
+            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                <div id="logoToggle" class="w-16 h-16 flex items-center justify-center cursor-pointer border-[3px] border-transparent rounded-none transition-all duration-150">
+                    <img src="img/nasa-logo.svg" alt="NASA Logo" class="h-11 w-auto object-contain">
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 z-10">
+                <a id="newsToggle" href="#" class="text-white text-[17px] font-bold flex items-center gap-1 border-[3px] border-transparent rounded-none p-2 hover:text-gray-300 transition-all duration-150">
+                    News & Events
+                    <img src="img/white arrow.png" alt="arrow" class="h-3 w-3">
+                </a>
+                
+                <a id="multimediaToggle" href="#" class="text-white text-[17px] font-bold flex items-center gap-1 border-[3px] border-transparent rounded-none p-2 hover:text-gray-300 transition-all duration-150">
+                    Multimedia
+                    <img src="img/white arrow.png" alt="arrow" class="h-3 w-3">
+                </a>
+
+                <a id="nasaPlusToggle" href="#" class="text-white text-[17px] font-bold flex items-center gap-1.5 border-[3px] border-transparent rounded-none p-2 hover:text-gray-300 transition-all duration-150">
+                    NASA+
+                    <span class="bg-transparent border-2 border-red-600 text-white text-[9px] font-bold px-2 py-0 rounded-none uppercase tracking-wider">
+                        Live
+                    </span>
+                </a>
+            </div>
+
+        </nav>
+        <div class="w-full h-[100vh] relative flex-shrink-0 flex items-center">
+            
+            <img src="img/backgraund.png" alt="Background" class="w-full h-full object-cover">
+            
+            <div class="absolute inset-0 bg-black/20 z-10"></div>
+
+            <div class="absolute inset-0 z-20 flex flex-col justify-end px-16 pb-16 max-w-[1440px] mx-auto w-full">
+                
+                <h1 class="text-white text-[74px] font-[900] tracking-[-0.03em] leading-[1.12] max-w-4xl mb-5">
+                    The Next Era of<br>NASA starts<br>with you
+                </h1>
+
+                <p class="text-white text-[17px] font-bold leading-relaxed max-w-2xl mb-8 opacity-95">
+                    NASA Force is a new hiring initiative, created with the U.S. Office of Personnel Management, to recruit exceptional technical talent for mission-critical roles supporting NASA's exploration, research, and advanced technology work.
+                </p>
+
+                <div class="mb-16">
+                    <a href="#" class="inline-block bg-[#E30613] hover:bg-red-700 text-white font-[900] text-[17px] px-7 py-3.5 rounded-none tracking-wide transition-colors duration-150">
+                        NASA Force Opportunities
+                    </a>
+                </div>
+
+                <div class="flex flex-row gap-12 w-full justify-start items-start">
+                    <div class="flex flex-col gap-1 border-t border-white/40 pt-4 w-[340px] flex-shrink-0">
+                        <span class="text-white/60 uppercase tracking-widest text-[11px] font-[900]">For the benefit of all</span>
+                        <a href="#" class="text-white text-lg font-[900] hover:underline">Careers at NASA</a>
+                    </div>
+                    <div class="flex flex-col gap-1 border-t border-white/40 pt-4 w-[340px] flex-shrink-0">
+                        <span class="text-white/60 uppercase tracking-widest text-[11px] font-[900]">Explore with us</span>
+                        <a href="#" class="text-white text-lg font-[900] hover:underline">How to Apply</a>
+                    </div>
+                    <div class="flex flex-col gap-1 border-t border-white/40 pt-4 w-[340px] flex-shrink-0">
+                        <span class="text-white/60 uppercase tracking-widest text-[11px] font-[900]">Inspire the world</span>
+                        <a href="#" class="text-white text-lg font-[900] hover:underline">Life at NASA</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="src/script.js"></script>
 </body>
 </html>
