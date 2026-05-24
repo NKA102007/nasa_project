@@ -1,111 +1,189 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NASA Project</title>
-    
-    <link rel="stylesheet" href="src/output.css">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
-        
-        * {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NASA – News Releases (Modified)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','sans-serif'] },
         }
-    </style>
+      }
+    }
+  </script>
 </head>
-<body class="bg-white antialiased">
+<body class="font-sans bg-white m-0 p-0 antialiased text-[#333]">
 
-    <div class="w-full min-h-screen flex flex-col relative">
-        
-        <nav class="bg-black py-3 px-8 flex justify-between items-center relative min-h-[90px] z-10 w-full">
-            
-            <div class="flex items-center z-10 gap-2">
-                <button id="exploreToggle" 
-                        class="bg-transparent border-[3px] border-transparent rounded-none 
-                               p-2 flex items-center gap-1.5 cursor-pointer 
-                               transition-all duration-150 outline-none">
-                    <span class="text-white text-xl font-[900]">Explore</span>
-                    <img src="img/white arrow.png" alt="arrow" class="h-3.5 w-3.5">
-                </button>
+  <header class="bg-black w-full relative z-50">
+    <div class="relative flex items-center justify-between h-[80px] px-8">
 
-                <div class="flex items-center">
-                    <input id="searchToggle" type="text" placeholder="Search" 
-                           class="bg-transparent border-2 border-neutral-700 text-neutral-500 
-                                  text-sm font-bold px-4 py-0 h-7 rounded-none placeholder-neutral-600 
-                                  focus:outline-none w-44 transition-all duration-150" />
-                </div>
-            </div>
-
-            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-                <div id="logoToggle" class="w-16 h-16 flex items-center justify-center cursor-pointer border-[3px] border-transparent rounded-none transition-all duration-150">
-                    <img src="img/nasa-logo.svg" alt="NASA Logo" class="h-11 w-auto object-contain">
-                </div>
-            </div>
-
-            <div class="flex items-center gap-4 z-10">
-                <a id="newsToggle" href="#" class="text-white text-[17px] font-bold flex items-center gap-1 border-[3px] border-transparent rounded-none p-2 hover:text-gray-300 transition-all duration-150">
-                    News & Events
-                    <img src="img/white arrow.png" alt="arrow" class="h-3 w-3">
-                </a>
-                
-                <a id="multimediaToggle" href="#" class="text-white text-[17px] font-bold flex items-center gap-1 border-[3px] border-transparent rounded-none p-2 hover:text-gray-300 transition-all duration-150">
-                    Multimedia
-                    <img src="img/white arrow.png" alt="arrow" class="h-3 w-3">
-                </a>
-
-                <a id="nasaPlusToggle" href="#" class="text-white text-[17px] font-bold flex items-center gap-1.5 border-[3px] border-transparent rounded-none p-2 hover:text-gray-300 transition-all duration-150">
-                    NASA+
-                    <span class="bg-transparent border-2 border-red-600 text-white text-[9px] font-bold px-2 py-0 rounded-none uppercase tracking-wider">
-                        Live
-                    </span>
-                </a>
-            </div>
-
-        </nav>
-        <div class="w-full h-[100vh] relative flex-shrink-0 flex items-center">
-            
-            <img src="img/backgraund.png" alt="Background" class="w-full h-full object-cover">
-            
-            <div class="absolute inset-0 bg-black/20 z-10"></div>
-
-            <div class="absolute inset-0 z-20 flex flex-col justify-end px-16 pb-16 max-w-[1440px] mx-auto w-full">
-                
-                <h1 class="text-white text-[74px] font-[900] tracking-[-0.03em] leading-[1.12] max-w-4xl mb-5">
-                    The Next Era of<br>NASA starts<br>with you
-                </h1>
-
-                <p class="text-white text-[17px] font-bold leading-relaxed max-w-2xl mb-8 opacity-95">
-                    NASA Force is a new hiring initiative, created with the U.S. Office of Personnel Management, to recruit exceptional technical talent for mission-critical roles supporting NASA's exploration, research, and advanced technology work.
-                </p>
-
-                <div class="mb-16">
-                    <a href="#" class="inline-block bg-[#E30613] hover:bg-red-700 text-white font-[900] text-[17px] px-7 py-3.5 rounded-none tracking-wide transition-colors duration-150">
-                        NASA Force Opportunities
-                    </a>
-                </div>
-
-                <div class="flex flex-row gap-12 w-full justify-start items-start">
-                    <div class="flex flex-col gap-1 border-t border-white/40 pt-4 w-[340px] flex-shrink-0">
-                        <span class="text-white/60 uppercase tracking-widest text-[11px] font-[900]">For the benefit of all</span>
-                        <a href="#" class="text-white text-lg font-[900] hover:underline">Careers at NASA</a>
-                    </div>
-                    <div class="flex flex-col gap-1 border-t border-white/40 pt-4 w-[340px] flex-shrink-0">
-                        <span class="text-white/60 uppercase tracking-widest text-[11px] font-[900]">Explore with us</span>
-                        <a href="#" class="text-white text-lg font-[900] hover:underline">How to Apply</a>
-                    </div>
-                    <div class="flex flex-col gap-1 border-t border-white/40 pt-4 w-[340px] flex-shrink-0">
-                        <span class="text-white/60 uppercase tracking-widest text-[11px] font-[900]">Inspire the world</span>
-                        <a href="#" class="text-white text-lg font-[900] hover:underline">Life at NASA</a>
-                    </div>
-                </div>
-
-            </div>
+      <div class="flex items-center gap-4 z-10">
+        <button class="flex items-center gap-[10px] text-white hover:opacity-75 transition-opacity">
+          <span class="text-[18px] font-bold leading-none tracking-wide">Explore</span>
+          <span class="flex items-center justify-center w-[26px] h-[26px] rounded-full border-2 border-white/60 flex-shrink-0">
+            <svg class="w-[12px] h-[12px] text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </span>
+        </button>
+        <div class="relative flex items-center">
+          <input
+            type="text"
+            placeholder="Search"
+            class="bg-transparent border border-white/40 text-white placeholder-white/50 text-[14px] px-4 py-[7px] w-[240px] focus:outline-none focus:border-white rounded-none"
+          />
         </div>
+      </div>
+
+      <div class="absolute inset-x-0 top-0 h-full flex items-center justify-center pointer-events-none">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg"
+          alt="NASA"
+          class="h-[62px] w-[62px] object-contain pointer-events-auto"
+        />
+      </div>
+
+      <nav class="flex items-center gap-8 z-10">
+        <button class="flex items-center gap-[5px] text-white text-[15px] font-bold hover:opacity-75 transition-opacity whitespace-nowrap">
+          News &amp; Events
+          <svg class="w-[13px] h-[13px] mt-[1px]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <button class="flex items-center gap-[5px] text-white text-[15px] font-bold hover:opacity-75 transition-opacity whitespace-nowrap">
+          Multimedia
+          <svg class="w-[13px] h-[13px] mt-[1px]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <button class="flex items-center gap-[6px] text-white text-[17px] font-black hover:opacity-75 transition-opacity whitespace-nowrap">
+          NASA+
+          <span class="border border-red-500 text-white text-[10.5px] font-extrabold px-[5px] py-[1.5px] leading-none tracking-[0.15em]">LIVE</span>
+        </button>
+      </nav>
 
     </div>
+  </header>
 
-    <script src="src/script.js"></script>
+  <nav class="bg-[#1b1b1b] w-full border-t border-white/10">
+    <div class="w-full flex items-center justify-center py-3 gap-[36px] px-12">
+      <a href="#" class="text-white text-[14px] font-bold hover:text-gray-300 transition-colors whitespace-nowrap">News Releases</a>
+      <a href="#" class="text-white text-[14px] font-bold hover:text-gray-300 transition-colors whitespace-nowrap">Recently Published</a>
+      <a href="#" class="text-white text-[14px] font-bold hover:text-gray-300 transition-colors whitespace-nowrap">Blogs</a>
+      <a href="#" class="text-white text-[14px] font-bold hover:text-gray-300 transition-colors whitespace-nowrap">Newsletters</a>
+      <button class="text-white text-[14px] font-bold flex items-center gap-[4px] hover:text-gray-300 transition-colors whitespace-nowrap bg-transparent border-none cursor-pointer p-0">
+        Social Media
+        <svg class="w-[13px] h-[13px] mt-[1px]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <a href="#" class="text-white text-[14px] font-bold hover:text-gray-300 transition-colors whitespace-nowrap">Budgets and Reports</a>
+      <button class="text-white text-[14px] font-bold flex items-center gap-[4px] hover:text-gray-300 transition-colors whitespace-nowrap bg-transparent border-none cursor-pointer p-0">
+        More
+        <svg class="w-[13px] h-[13px] mt-[1px]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="bg-white w-full">
+    <div class="max-w-[1320px] mx-auto px-8 pt-[40px] pb-24">
+
+      <section class="mb-[60px]">
+        <h2 class="text-[14px] font-bold text-[#111] mb-[12px]">Receive NASA News Releases</h2>
+        
+        <hr class="border-0 border-t border-black w-full mb-[24px]" />
+
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-[20px]">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg"
+              alt="NASA"
+              class="w-[76px] h-[76px] object-contain flex-shrink-0"
+            />
+            <span class="text-[26px] font-extrabold text-[#111] tracking-tight">Sign Up</span>
+          </div>
+
+          <div class="flex items-center gap-[24px]">
+            <span class="text-[13px] text-[#333] font-medium max-w-[450px]">Sign up to receive NASA news releases and other information.</span>
+            <a href="#" class="flex-shrink-0 flex items-center justify-center w-[24px] h-[24px] rounded-full bg-[#e53935] hover:bg-red-700 transition-colors">
+              <svg class="w-[11px] h-[11px] text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1 class="text-[26px] font-extrabold text-[#111] tracking-tight mb-[30px]">2026 NASA News Releases</h1>
+
+        <div class="flex flex-col">
+
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-gray-100" style="width:270px; height:175px;">
+              <img
+                src="https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=270&h=175&fit=crop"
+                alt="Janet Petro"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Kennedy Center Director Announces Plans to Retire
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">3 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                NASA announced Friday Janet Petro, center director for the agency's Kennedy Space Center in Florida, is retiring. Prior to joining NASA, Petro worked in a variety of military and industry positions, ultimately beginning her career at the agency in 2007...
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=270&h=175&fit=crop"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Invited Media to Ireland Artemis Accords signing
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                Ireland will sign the Artemis Accords during a ceremony at 3 p.m. EDT Monday, May 4, at NASA Headquarters in Washington. NASA Administrator Jared Isaacman will host Ambassador of Ireland to the United States Geraldine Byrne Nason; Minister...
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
 </body>
 </html>
