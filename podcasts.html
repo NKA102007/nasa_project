@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Podcasts</title>
+ 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { 
+            sans: ['"Inter Tight"', 'sans-serif'] 
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans m-0 p-0 antialiased text-[#333] bg-white">
+
+
+  <header class="bg-black w-full relative z-50">
+    <div class="relative flex items-center justify-between h-[80px] px-8">
+
+      <div class="flex items-center gap-4 z-10">
+        <button class="flex items-center gap-[10px] text-white hover:opacity-75 transition-opacity">
+          <span class="text-[18px] font-bold leading-none tracking-wide">Explore</span>
+          <span class="flex items-center justify-center w-[26px] h-[26px] rounded-full border-2 border-white/60 flex-shrink-0">
+            <svg class="w-[12px] h-[12px] text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </span>
+        </button>
+        <div class="relative flex items-center">
+          <input
+            type="text"
+            placeholder="Search"
+            class="bg-transparent border border-white/40 text-white placeholder-white/50 text-[14px] px-4 py-[7px] w-[240px] focus:outline-none focus:border-white rounded-none"
+          />
+        </div>
+      </div>
+
+      <div class="absolute inset-x-0 top-0 h-full flex items-center justify-center pointer-events-none">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg"
+          alt="NASA"
+          class="h-[62px] w-[62px] object-contain pointer-events-auto"
+        />
+      </div>
+
+      <nav class="flex items-center gap-8 z-10">
+        <button class="flex items-center gap-[5px] text-white text-[15px] font-bold hover:opacity-75 transition-opacity whitespace-nowrap">
+          News &amp; Events
+          <svg class="w-[13px] h-[13px] mt-[1px]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <button class="flex items-center gap-[5px] text-white text-[15px] font-bold hover:opacity-75 transition-opacity whitespace-nowrap">
+          Multimedia
+          <svg class="w-[13px] h-[13px] mt-[1px]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <button class="flex items-center gap-[6px] text-white text-[17px] font-black hover:opacity-75 transition-opacity whitespace-nowrap">
+          NASA+
+          <span class="border border-red-500 text-white text-[10.5px] font-extrabold px-[5px] py-[1.5px] leading-none tracking-[0.15em]">LIVE</span>
+        </button>
+      </nav>
+
+    </div>
+  </header>
+
+  <div class="pt-16 pl-8 pr-8">
+    <h1 class="text-[90px] font-black leading-tight tracking-wider text-black">Podcasts</h1>
+    <p class="text-[17px] text-gray-600 mt-4 pr-6 w-full leading-loose tracking-wide">
+      From longform interviews with astronauts and engineers to narrative shows that take you on a tour of the galaxy, NASA's diverse podcast portfolio lets you <br> experience the thrill of space exploration without ever leaving Earth.
+    </p>
+  </div>
+
+  <div class="mt-40 px-8 pb-16 grid grid-cols-1 md:grid-cols-4 gap-6">
+    
+    <div class="flex flex-col">
+      <img src="img/podcasts 1.png" alt="Houston We Have a Podcast" class="w-full aspect-square object-cover" />
+      <h2 class="text-[24px] font-extrabold text-black mt-4 leading-normal tracking-wide">Houston We Have a Podcast</h2>
+      <div class="flex items-center gap-1.5 text-gray-500 text-[11px] font-bold tracking-widest mt-2 uppercase">
+        <svg class="w-[14px] h-[14px]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 7a2 2 0 00-2 2v2a2 2 0 004 0V9a2 2 0 00-2-2z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 11a5 5 0 01-10 0M12 16v3M9 19h6" />
+        </svg>
+        Podcast
+      </div>
+      <p class="text-[15px] text-gray-700 mt-3 leading-loose font-medium tracking-wide">
+        From Earth orbit to the Moon and Mars, explore the world of human spaceflight with NASA each week on the official podcast of the Johnson Space Center in Houston, Texas. Listen to in-depth conversations with the astronauts, scientists and engineers who make it possible.
+      </p>
+    </div>
+
+    <div class="flex flex-col">
+      <img src="img/podcasts 2.png" alt="NASA's Curious Universe" class="w-full aspect-square object-cover" />
+      <h2 class="text-[24px] font-extrabold text-black mt-4 leading-normal tracking-wide">NASA's Curious Universe</h2>
+      <div class="flex items-center gap-1.5 text-gray-500 text-[11px] font-bold tracking-widest mt-2 uppercase">
+        <svg class="w-[14px] h-[14px]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 7a2 2 0 00-2 2v2a2 2 0 004 0V9a2 2 0 00-2-2z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 11a5 5 0 01-10 0M12 16v3M9 19h6" />
+        </svg>
+        Podcast
+      </div>
+      <p class="text-[15px] text-gray-700 mt-3 leading-loose font-medium tracking-wide">
+        Come get curious with NASA. As an official NASA podcast, Curious Universe brings you mind-blowing science and space adventures you won't find anywhere else. Explore the cosmos alongside astronauts, scientists, engineers, and other top NASA experts. Learn something new about the wild and wonderful universe we share. All you need to get started is a little curiosity.
+      </p>
+    </div>
+
+    <div class="flex flex-col">
+      <img src="img/podcasts 3.png" alt="Small Steps, Giant Leaps" class="w-full aspect-square object-cover" />
+      <h2 class="text-[24px] font-extrabold text-black mt-4 leading-normal tracking-wide">Small Steps, Giant Leaps</h2>
+      <div class="flex items-center gap-1.5 text-gray-500 text-[11px] font-bold tracking-widest mt-2 uppercase">
+        <svg class="w-[14px] h-[14px]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 7a2 2 0 00-2 2v2a2 2 0 004 0V9a2 2 0 00-2-2z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 11a5 5 0 01-10 0M12 16v3M9 19h6" />
+        </svg>
+        Podcast
+      </div>
+      <p class="text-[15px] text-gray-700 mt-3 leading-loose font-medium tracking-wide">
+        NASA's technical workforce put boots on the Moon, tire tracks on Mars, and the first reusable spacecraft in orbit around Earth. Learn what's next as they build missions that redefine the future with amazing discoveries and remarkable innovations.
+      </p>
+    </div>
+
+    <div class="flex flex-col">
+      <img src="img/podcasts 4.png" alt="Universo curioso de la NASA" class="w-full aspect-square object-cover" />
+      <h2 class="text-[24px] font-extrabold text-black mt-4 leading-normal tracking-wide">Universo curioso de la NASA</h2>
+      <div class="flex items-center gap-1.5 text-gray-500 text-[11px] font-bold tracking-widest mt-2 uppercase">
+        <svg class="w-[14px] h-[14px]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 7a2 2 0 00-2 2v2a2 2 0 004 0V9a2 2 0 00-2-2z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 11a5 5 0 01-10 0M12 16v3M9 19h6" />
+        </svg>
+        Podcast
+      </div>
+      <p class="text-[15px] text-gray-700 mt-3 leading-loose font-medium tracking-wide">
+        Bienvenidos a Universo curioso de la NASA, en donde te invitamos a explorar el cosmos en tu idioma. En este pódcast, ¡la NASA es tu guía turística a las estrellas!
+      </p>
+    </div>
+
+  </div>
+<footer class="bg-black text-white w-screen relative left-1/2 right-1/2 -ml-[50vw] +mr-[50vw] block clear-both pt-[80px] pb-[60px]">
+  <div class="max-w-[1320px] mx-auto px-8">
+    
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg"
+      alt="NASA Logo"
+      class="w-[60px] h-[60px] object-contain mb-[32px]"
+    />
+
+    <div class="grid grid-cols-1 xl:grid-cols-12 gap-12 pb-[60px]">
+      
+      <div class="xl:col-span-4 flex flex-col items-start">
+        <h2 class="text-[22px] font-extrabold tracking-tight leading-[1.2] mb-[20px] max-w-[320px]">
+          National Aeronautics and Space Administration
+        </h2>
+        <p class="text-[14px] text-gray-400 leading-[1.6] mb-[28px] max-w-[340px]">
+          NASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.
+        </p>
+        <a href="#" class="text-[14px] font-bold hover:underline mb-[16px] block">
+          About NASA's Mission
+        </a>
+        <a href="#" class="flex items-center gap-[8px] text-[15px] font-black hover:opacity-80 transition-opacity">
+          Join Us
+          <span class="flex items-center justify-center w-[18px] h-[18px] rounded-full bg-red-600">
+            <svg class="w-[9px] h-[9px] text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="xl:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-8 xl:pl-[40px] items-start pt-[6px]">
+        
+        <div class="flex flex-col gap-[14px] text-[14px]">
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">News & Events</a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">Multimedia</a>
+          <a href="#" class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+            NASA+ <span class="text-white text-[9px] font-bold px-[5px] py-[1px] border border-red-600 rounded-[3px] bg-transparent tracking-wide">LIVE</span>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">Missions</a>
+        </div>
+
+        <div class="flex flex-col gap-[14px] text-[14px]">
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">Humans in Space</a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">Earth</a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">The Solar System</a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">The Universe</a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">Science</a>
+        </div>
+
+        <div class="flex flex-col gap-[14px] text-[14px]">
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">Aeronautics</a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">Technology</a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">Learning Resources</a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">About NASA</a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors">NASA en Español</a>
+        </div>
+
+        <div class="flex flex-col gap-[16px]">
+          <span class="text-[14px] font-bold text-gray-300 tracking-wide">Follow NASA</span>
+          
+          <div class="flex items-center gap-[10px]">
+  <a href="#" class="w-[32px] h-[32px] rounded-full bg-[#1877F2] hover:opacity-80 flex items-center justify-center transition-opacity">
+    <img src="img/facebook-circular-logo.png" alt="Facebook" class="w-[16px] h-[16px]">
+  </a>
+
+  <a href="#" class="w-[32px] h-[32px] rounded-full bg-gradient-to-tr from-[#FFB200] via-[#D91A5F] to-[#712CB0] hover:opacity-80 flex items-center justify-center transition-opacity">
+    <img src="img/instagram-circular-logo.png" alt="Instagram" class="w-[16px] h-[16px]">
+  </a>
+
+  <a href="#" class="w-[32px] h-[32px] rounded-full bg-[#111111] border border-white/20 hover:bg-white/10 flex items-center justify-center transition-colors">
+    <img src="img/twitter.png" alt="X" class="w-[14px] h-[14px]">
+  </a>
+
+  <a href="#" class="w-[32px] h-[32px] rounded-full bg-[#FF0000] hover:opacity-80 flex items-center justify-center transition-opacity">
+    <img src="img/youtube.png" alt="YouTube" class="w-[16px] h-[16px]">
+  </a>
+</div>
+          <a href="#" class="text-[14px] text-gray-300 hover:text-white transition-colors mt-2 block">More NASA Social Accounts</a>
+          <a href="#" class="text-[14px] text-gray-300 hover:text-white transition-colors block">NASA Newsletters</a>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="border-gray-800 my-0" />
+
+    <div class="pt-[30px] flex flex-col gap-[24px]">
+      
+      <div class="flex flex-wrap items-center gap-x-[24px] gap-y-[12px] text-[13px] text-gray-400">
+        <a href="#" class="hover:text-white transition-colors">Sitemap</a>
+        <a href="#" class="hover:text-white transition-colors">For Media</a>
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-colors">FOIA</a>
+        <a href="#" class="hover:text-white transition-colors">No FEAR Act</a>
+        <a href="#" class="hover:text-white transition-colors">Office of the IG</a>
+        <a href="#" class="hover:text-white transition-colors">Budget & Annual Reports</a>
+        <a href="#" class="hover:text-white transition-colors">Agency Financial Reports</a>
+        <a href="#" class="hover:text-white transition-colors">Contact NASA</a>
+        <a href="#" class="hover:text-white transition-colors">Accessibility</a>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-x-[24px] gap-y-[8px] text-[13px] text-gray-500 font-medium">
+        <div>Page Last Updated: <span class="text-gray-400">Jan 02, 2026</span></div>
+        <div>Page Editor: <span class="text-gray-400">Dacia Massengill</span></div>
+        <div>Responsible NASA Official: <span class="text-gray-400">Abigail Bowman</span></div>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>
