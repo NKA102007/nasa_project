@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NASA – News Releases </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','sans-serif'] },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans bg-white m-0 p-0 antialiased text-[#333]">
+
+  <header class="bg-black w-full relative z-50">
+  <div class="relative flex items-center justify-between h-[80px] px-8">
+
+    <div class="flex items-center gap-4 z-10">
+      <button class="flex items-center gap-[10px] text-white hover:opacity-75 transition-opacity">
+        <span class="text-[18px] font-bold leading-none tracking-wide">Explore</span>
+        <span class="flex items-center justify-center w-[26px] h-[26px] rounded-full border-2 border-white/60 flex-shrink-0">
+          <svg class="w-[12px] h-[12px] text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+          </svg>
+        </span>
+      </button>
+      <div class="relative flex items-center">
+        <input
+          type="text"
+          placeholder="Search"
+          class="bg-transparent border border-white/40 text-white placeholder-white/50 text-[14px] px-4 py-[7px] w-[240px] focus:outline-none focus:border-white rounded-none"
+        />
+      </div>
+    </div>
+
+    <div class="absolute inset-x-0 top-0 h-full flex items-center justify-center pointer-events-none">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg"
+        alt="NASA"
+        class="h-[62px] w-[62px] object-contain pointer-events-auto"
+      />
+    </div>
+
+    <nav class="flex items-center gap-8 z-10 text-white">
+      
+      <div class="relative dropdown-wrapper">
+        <button onclick="toggleDropdown('news-menu')" class="dropdown-btn flex items-center gap-2 text-white text-[16px] font-bold tracking-wide hover:opacity-90 transition-opacity whitespace-nowrap">
+          News &amp; Events
+          <svg class="arrow-icon w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        
+        <div id="news-menu" class="dropdown-content hidden absolute right-0 top-full mt-[28px] w-[275px] bg-black pt-6 px-6 pb-8 shadow-2xl text-left z-50">
+          <div class="flex items-center mb-8 pb-2">
+            <h3 class="text-white text-[20px] font-extrabold tracking-wide">News &amp; Events</h3>
+            <span class="bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-700 transition-colors ml-3 flex-shrink-0">
+              <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </span>
+          </div>
+          <ul class="flex flex-col gap-[14px] text-white font-semibold">
+            <li><a href="NASA News Releases.html" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">News Releases</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Recently Published</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Video Series on NASA+</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Podcasts &amp; Audio</a></li>
+            <li><a href="nasa_blogs.html" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Blogs</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Newsletters</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Social Media</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Media Resources</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Events</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Upcoming Launches &amp; Landings</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Virtual Guest Program</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="relative dropdown-wrapper">
+        <button onclick="toggleDropdown('multimedia-menu')" class="dropdown-btn flex items-center gap-2 text-white text-[16px] font-bold tracking-wide hover:opacity-90 transition-opacity whitespace-nowrap">
+          Multimedia
+          <svg class="arrow-icon w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+
+        <div id="multimedia-menu" class="dropdown-content hidden absolute right-0 top-full mt-[28px] w-[275px] bg-black pt-6 px-6 pb-8 shadow-2xl text-left z-50">
+          <div class="flex items-center mb-8 pb-2">
+            <h3 class="text-white text-[20px] font-extrabold tracking-wide">Multimedia</h3>
+            <span class="bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-700 transition-colors ml-3 flex-shrink-0">
+              <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </span>
+          </div>
+          <ul class="flex flex-col gap-[14px] text-white font-semibold">
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">NASA+</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Images</a></li>
+            <li><a href="live.html" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">NASA Live</a></li>
+            <li><a href="nasa_apps.html" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">NASA Apps</a></li>
+            <li><a href="podcasts.html" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Podcasts</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Image of the Day</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">e-Books</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">Interactives</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">STEM Multimedia</a></li>
+            <li><a href="#" class="hover:opacity-75 text-[15px] tracking-wide block transition-opacity">NASA Brand &amp; Usage Guidelines</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <button class="flex items-center gap-[6px] text-white text-[17px] font-black hover:opacity-75 transition-opacity whitespace-nowrap">
+        NASA+
+        <span class="border border-red-500 text-white text-[10.5px] font-extrabold px-[5px] py-[1.5px] leading-none tracking-[0.15em]">LIVE</span>
+      </button>
+    </nav>
+
+  </div>
+</header>
+
+  <nav class="bg-[#1b1b1b] w-full border-t border-white/10">
+    <div class="w-full flex items-center justify-center py-3 gap-[36px] px-12">
+      <a href="#" class="text-white text-[14px] font-bold hover:text-gray-300 transition-colors whitespace-nowrap">News Releases</a>
+      <a href="#" class="text-white text-[14px] font-bold hover:text-gray-300 transition-colors whitespace-nowrap">Recently Published</a>
+      <a href="nasa_blogs.html" class="text-white text-[14px] font-bold hover:text-gray-300 transition-colors whitespace-nowrap">Blogs</a>
+      <a href="#" class="text-white text-[14px] font-bold hover:text-gray-300 transition-colors whitespace-nowrap">Newsletters</a>
+      <button class="text-white text-[14px] font-bold flex items-center gap-[4px] hover:text-gray-300 transition-colors whitespace-nowrap bg-transparent border-none cursor-pointer p-0">
+        Social Media
+        <svg class="w-[13px] h-[13px] mt-[1px]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <a href="#" class="text-white text-[14px] font-bold hover:text-gray-300 transition-colors whitespace-nowrap">Budgets and Reports</a>
+      <button class="text-white text-[14px] font-bold flex items-center gap-[4px] hover:text-gray-300 transition-colors whitespace-nowrap bg-transparent border-none cursor-pointer p-0">
+        More
+        <svg class="w-[13px] h-[13px] mt-[1px]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="bg-white w-full">
+    <div class="max-w-[1320px] mx-auto px-8 pt-[40px] pb-24">
+
+      <section class="mb-[60px]">
+        <h2 class="text-[14px] font-bold text-[#111] mb-[12px]">Receive NASA News Releases</h2>
+        
+        <hr class="border-0 border-t border-gray-400/60 w-full mb-[24px]" />
+
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-[20px]">
+            <img
+              src="img/nasa-logo.svg"
+              alt="NASA"
+              class="w-[76px] h-[76px] object-contain flex-shrink-0"
+            />
+            <span class="text-[26px] font-extrabold text-[#111] tracking-tight">Sign Up</span>
+          </div>
+
+          <div class="flex items-center gap-[24px]">
+            <span class="text-[13px] text-[#333] font-medium max-w-[450px]">Sign up to receive NASA news releases and other information.</span>
+            <a href="#" class="flex-shrink-0 flex items-center justify-center w-[24px] h-[24px] rounded-full bg-[#e53935] hover:bg-red-700 transition-colors">
+              <svg class="w-[11px] h-[11px] text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1 class="text-[26px] font-extrabold text-[#111] tracking-tight mb-[30px]">2026 NASA News Releases</h1>
+
+        <div class="flex flex-col">
+
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-gray-100" style="width:270px; height:175px;">
+              <img
+                src="img/1.png"
+                alt="Janet Petro"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Kennedy Center Director Announces Plans to Retire
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">3 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                NASA announced Friday Janet Petro, center director for the agency's Kennedy Space Center in Florida, is retiring. Prior to joining NASA, Petro worked in a variety of military and industry positions, ultimately beginning her career at the agency in 2007...
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/2.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Invited Media to Ireland Artemis Accords signing
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                Ireland will sign the Artemis Accords during a ceremony at 3 p.m. EDT Monday, May 4, at NASA Headquarters in Washington. NASA Administrator Jared Isaacman will host Ambassador of Ireland to the United States Geraldine Byrne Nason; Minister...
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/3.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Invited Media to Ireland Artemis Accords signing
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                Ireland will sign the Artemis Accords during a ceremony at 3 p.m. EDT Monday, May 4, at NASA Headquarters in Washington. NASA Administrator Jared Isaacman will host Ambassador of Ireland to the United States Geraldine Byrne Nason; Minister...
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/4.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Names Brian Hughes to Launch Operations Role
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                NASA announced Friday that Brian Hughes will return to the agency as senior director of launch operations, based at the agency’s
+Kennedy Space Center in Florida. In this role, Hughes will provide enterprise-level leadership, strategic direction, and 
+operational oversight for…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/5.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Sets Coverage for SpaceX 34th Station Resupply Launch, Arrival
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+              Editor’s Note: This advisory was updated Wednesday, May 13, 2026 with the most recent launch and arrival coverage information. 
+Editor’s Note: This advisory was updated Tuesday, May 12, 2026 with the most recent launch and arrival coverage information.
+NASA and…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/6.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Science, Cargo Launch on 34th SpaceX Resupply Mission to Station
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                The 34th SpaceX commercial resupply mission under contract with NASA is headed to the International Space Station with new
+scientific experiments after lifting off at 6:05 p.m. EDT Friday on a Falcon 9 rocket from Space Launch Complex 40 at…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/7.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Invites Media to Annual Lunabotics Robotics Competition
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+               NASA will hold its 2026 Lunabotics Challenge Tuesday, May 19, to Thursday, May 21, at the Astronauts Memorial Foundation’s
+Center for Space Education at the Kennedy Space Center Visitor Complex in Florida.   Links to view the Lunabotics competition 
+ive can be found on the agency’s Lunabotics page. The competition is slated…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/8.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Shares SpaceX Crew-13 Assignments for Space Stattion Mission
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+As part of NASA’s SpaceX Crew-13 mission, four crew members from three space agencies will launch no earlier than mid-September
+to the International Space Station for a long-duration science expedition. NASA astronauts Jessica Watkins and Luke Delaney will serve as…
+                 </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/9.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Astronaut Anil Menon to Discuss Upcoming Launch Mission
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+               Editor’s Note: This advisory was updated on April 23, 2026, to extend the deadline for phone RSVPs, as well as to correctly state that Anil
+Menon is a colonel in the United States Space Force. NASA will host a news…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/2.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Invites Media to Jordan Artemis Accords Signing Ceremony
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                The Hashemite Kingdom of Jordan will sign the Artemis Accords during a ceremony at 9:30 a.m. EDT Thursday, April 23, at NASA
+Headquarters in Washington. NASA Administrator Jared Isaacman will host Ambassador Dina Kawar of the Hashemite Kingdom of Jordan…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/11.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA to Cover Progress 95 Spacecraft Launch, Docking
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                NASA will provide live coverage of the launch and docking of a Roscosmos cargo spacecraft carrying about three tons of food, fuel, and
+supplies for the crew aboard the International Space Station. The unpiloted Progress 95 resupply spacecraft is scheduled…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/12.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+               NASA Rolls Out Artemis III Moon Rocker Roll Stage
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                Following the recent successful test flight of NASA’s Artemis II mission around the Moon, NASA rolled out the core stage, or the largest
+section, of the agency’s SLS (Space Launch System) rocket that will launch the crewed Artemis III mission…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/13.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+               NASA Invites Media to SpaceX’s 34th Resupply Launch to Space Station
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                Media accreditation is open for the next U.S. launch to deliver NASA science investigations, supplies, and equipment to the International
+Space Station. This launch is the 34th SpaceX Commercial Resupply Services mission to the orbital laboratory for NASA and will…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/14.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+               NASA Welcomes Latvia as Newest Artemis Accords Signatory
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                The Republic of Latvia signed the Artemis Accords Monday during a ceremony hosted by NASA at the agency’s headquarters in Washington,
+becoming the 62nd nation to commit to responsible space exploration for all humanity.  “We are proud to welcome Latvia to the Artemis
+Accords,” said NASA Administrator Jared Isaacman.…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/15.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA, OPM Announce New NASA Force Website, Open Job Applications
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+               NASA and the U.S. Office of Personnel Management (OPM) launched the NASA Force website on Friday, opening applications for roles aimed
+at recruiting the nation’s top engineers and technologists to support America’s air and space program.  NASA Force, a new hiring initiative
+developed in partnership with OPM, will recruit and…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/2.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Invites Media to Latvia Artemis Accords Signing Ceremony
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+               The Republic of Latvia will sign the Artemis Accords during a ceremony at 9 a.m. EDT Monday, April 20, at NASA Headquarters in Washington.
+NASA Administrator Jared Isaacman will host Dace Melbārde, Latvia’s minister for education and science; Jānis Beķeris,…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/2.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Selects Voyager for Seventh Private Mission to Space Statio
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                NASA and Voyager Technologies have signed an order for the seventh private astronaut mission to the International Space Station, targeted
+to launch no earlier than 2028 from Florida. This is the company’s first selection for a private astronaut mission to…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/18.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Invites Media to Rollout Even or Artemis III Moon Rocket Stage
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                NASA will roll the largest section of the agency’s SLS (Space Launch System) rocket, which will launch the second crewed Artemis mission, out
+of the agency’s Michoud Assembly Facility in New Orleans on Monday, April 20. What’s called the top…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/2.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Awards Data Egineering, Informatics Support Contract
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                NASA has selected Development Seed of Washington to provide research and development services to the Office of Data Science and
+Informatics (ODSI) at the agency’s Marshall Space Flight Center in Huntsville, Alabama. The award is a performance-based,
+indefinite-delivery/indefinite-quantity contract with…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/20.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA to Host Artemis II Crew Postflight News Converence
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                Fresh off their return to Earth, the Artemis II astronauts will hold a news conference at 2:30 p.m. EDT Thursday, April 16, at NASA’s Johnson
+Space Center in Houston to discuss their historic mission around the Moon. NASA astronauts Reid…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/21.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+               NASA Science, Cargo Launch Aboard Northrop Grumman CRS-24 
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                              NASA is sending more science, technology demonstrations, and crew supplies to the International Space Station following the successful
+launch of the agency’s Northrop Grumman Commercial Resupply Services 24 mission, or Northrop Grumman CRS-24. Northrop Grumman’s
+Cygnus XL spacecraft, carrying approximately…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/22.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA Welcomes Record-Setting Artemis II Moonfarers Back to Ears
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                Editor’s note: This release was updated on May 7, 2026, to reflect the official number of miles flown during the Artemis II mission. The first
+astronauts to travel to the Moon in more than half a century are back on…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/23.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA’s Artemis II Crew Beams Official Moon Flyby Photos to Earth
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                Editor’s note: Some photo captions were updated on April 8, 2026, to reflect ongoing scientific observations and discussion about the images.
+The first flyby images of the Moon captured by NASA’s Artemis II astronauts during their historic test flight reveal…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/24.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA to Host Media Call with Artemis II Crew on Way Home from Moon
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                Editor’s note: This advisory was updated Wednesday, April 8, 2026, to reflect a time change in the event. Media will have an opportunity at
+10:45 p.m. EDT on Wednesday, April 8, to speak with NASA’s Artemis II crew members as…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex gap-[32px] items-start py-[24px] border-t border-b border-gray-200">
+            <div class="flex-shrink-0 overflow-hidden bg-black" style="width:270px; height:175px;">
+              <img
+                src="img/25.png"
+                alt="Artemis Accords"
+                class="w-full h-full object-cover object-center block"
+              />
+            </div>
+            <div class="flex-1 min-w-0 flex flex-col pt-1">
+              <h2 class="text-[20px] font-bold text-[#111] leading-[1.3] mb-[6px] hover:underline cursor-pointer">
+                NASA’s Artemis II Crew Eclipses Record for Farthest Human Spaceflight
+              </h2>
+              <p class="text-[11px] font-bold text-gray-400 tracking-[0.22em] uppercase mb-[10px]">1 Min Read</p>
+              <p class="text-[14.5px] text-[#555] leading-[1.6] mb-[14px]">
+                Editor’s note: This release was updated at 7:28 p.m. EDT on April 6, 2026, to reflect Orion’s final closest approach to the lunar surface from
+about 4,070 miles to about 4,067 miles. NASA also updated the farthest distance Orion will…
+              </p>
+              <div class="flex items-center gap-[7px]">
+                <svg class="w-[15px] h-[15px] flex-shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2Z"/>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                  <path d="M7 8h6M7 12h10M7 16h10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[11px] font-bold text-gray-400 tracking-[0.2em] uppercase">News Release</span>
+              </div>
+            </div>
+          </article>
+           <div class="flex items-center gap-[6px] mt-[40px] mb-[20px]">
+  
+  <a href="#" class="flex items-center justify-center w-[36px] h-[36px] border border-gray-1000 text-[#111] font-medium text-[14px] bg-gray-100/60 cursor-default">
+    1
+  </a>
+
+  <a href="#" class="flex items-center justify-center w-[36px] h-[36px] border border-gray-1000 text-[#111] font-medium text-[14px] hover:border-gray-400 hover:bg-gray-50 transition-colors">
+    2
+  </a>
+
+  <a href="#" class="flex items-center justify-center w-[36px] h-[36px] border border-gray-1000 text-[#111] font-medium text-[14px] hover:border-gray-400 hover:bg-gray-50 transition-colors">
+    3
+  </a>
+
+  <a href="#" class="flex items-center justify-center w-[36px] h-[36px] border border-gray-1000 text-[#111] font-medium text-[14px] hover:border-gray-400 hover:bg-gray-50 transition-colors">
+    4
+  </a>
+
+  <a href="#" class="flex items-center justify-center px-[14px] h-[36px] border border-gray-1000 text-[#111] font-semibold text-[14px] hover:border-gray-400 hover:bg-gray-50 transition-colors tracking-wide ml-[2px]">
+    Next
+  </a>
+
+</div>
+</main>
+ <footer
+      class="bg-black text-white w-screen relative left-1/2 right-1/2 -ml-[50vw] +mr-[50vw] block clear-both pt-[80px] pb-[60px]"
+    >
+      <div class="max-w-[1320px] mx-auto px-8">
+        <img
+          src="img/nasa-logo.svg"
+          alt="NASA Logo"
+          class="w-[60px] h-[60px] object-contain mb-[32px]"
+        />
+
+        <div class="grid grid-cols-1 xl:grid-cols-12 gap-12 pb-[60px]">
+          <div class="xl:col-span-4 flex flex-col items-start">
+            <h2
+              class="text-[22px] font-extrabold tracking-tight leading-[1.2] mb-[20px] max-w-[320px]"
+            >
+              National Aeronautics and Space Administration
+            </h2>
+            <p
+              class="text-[14px] text-gray-400 leading-[1.6] mb-[28px] max-w-[340px]"
+            >
+              NASA explores the unknown in air and space, innovates for the
+              benefit of humanity, and inspires the world through discovery.
+            </p>
+            <a
+              href="#"
+              class="text-[14px] font-bold hover:underline mb-[16px] block"
+            >
+              About NASA's Mission
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-[8px] text-[15px] font-black hover:opacity-80 transition-opacity"
+            >
+              Join Us
+              <span
+                class="flex items-center justify-center w-[18px] h-[18px] rounded-full bg-red-600"
+              >
+                <svg
+                  class="w-[9px] h-[9px] text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+
+          <div
+            class="xl:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-8 xl:pl-[40px] items-start pt-[6px]"
+          >
+            <div class="flex flex-col gap-[14px] text-[14px]">
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >News & Events</a
+              >
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >Multimedia</a
+              >
+              <a
+                href="#"
+                class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+              >
+                NASA+
+                <span
+                  class="text-white text-[9px] font-bold px-[5px] py-[1px] border border-red-600 rounded-[3px] bg-transparent tracking-wide"
+                  >LIVE</span
+                >
+              </svg>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >Missions</a
+              >
+            </div>
+
+            <div class="flex flex-col gap-[14px] text-[14px]">
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >Humans in Space</a
+              >
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >Earth</a
+              >
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >The Solar System</a
+              >
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >The Universe</a
+              >
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >Science</a
+              >
+            </div>
+
+            <div class="flex flex-col gap-[14px] text-[14px]">
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >Aeronautics</a
+              >
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >Technology</a
+              >
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >Learning Resources</a
+              >
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >About NASA</a
+              >
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                >NASA en Español</a
+              >
+            </div>
+
+            <div class="flex flex-col gap-[16px]">
+              <span class="text-[14px] font-bold text-gray-300 tracking-wide"
+                >Follow NASA</span
+              >
+
+              <div class="flex items-center gap-[10px]">
+                <a href="#" class="w-[32px] h-[32px] hover:opacity-80 flex items-center justify-center transition-opacity">
+                  <img src="img/landing_page/fb.png" alt="Facebook" class="w-[30px] h-[30px]">
+                </a>
+
+                <a href="#" class="w-[32px] h-[32px] hover:opacity-80 flex items-center justify-center transition-opacity">
+                  <img src="img/landing_page/ig.png" alt="Instagram" class="w-[30px] h-[30px]">
+                </a>
+
+                <a href="#" class="w-[32px] h-[32px] hover:bg-white/10 flex items-center justify-center transition-colors">
+                  <img src="img/landing_page/x.png" alt="X" class="w-[30px] h-[30px]">
+                </a>
+
+                <a href="#" class="w-[32px] h-[32px] hover:opacity-80 flex items-center justify-center transition-opacity">
+                  <img src="img/landing_page/yt.png" alt="YouTube" class="w-[30px] h-[30px]">
+                </a>
+              </div>
+
+              <a
+                href="#"
+                class="text-[14px] text-gray-300 hover:text-white transition-colors mt-2 block"
+                >More NASA Social Accounts</a
+              >
+              <a
+                href="#"
+                class="text-[14px] text-gray-300 hover:text-white transition-colors block"
+                >NASA Newsletters</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-800 my-0" />
+
+        <div class="pt-[30px] flex flex-col gap-[24px]">
+          <div
+            class="flex flex-wrap items-center gap-x-[24px] gap-y-[12px] text-[13px] text-gray-400"
+          >
+            <a href="#" class="hover:text-white transition-colors">Sitemap</a>
+            <a href="#" class="hover:text-white transition-colors">For Media</a>
+            <a href="#" class="hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-white transition-colors">FOIA</a>
+            <a href="#" class="hover:text-white transition-colors"
+              >No FEAR Act</a
+            >
+            <a href="#" class="hover:text-white transition-colors"
+              >Office of the IG</a
+            >
+            <a href="#" class="hover:text-white transition-colors"
+              >Budget & Annual Reports</a
+            >
+            <a href="#" class="hover:text-white transition-colors"
+              >Agency Financial Reports</a
+            >
+            <a href="#" class="hover:text-white transition-colors"
+              >Contact NASA</a
+            >
+            <a href="#" class="hover:text-white transition-colors"
+              >Accessibility</a
+            >
+          </div>
+
+          <div
+            class="flex flex-wrap items-center gap-x-[24px] gap-y-[8px] text-[13px] text-gray-500 font-medium"
+          >
+            <div>
+              Page Last Updated: <span class="text-gray-400">Jan 02, 2026</span>
+            </div>
+            <div>
+              Page Editor: <span class="text-gray-400">Dacia Massengill</span>
+            </div>
+            <div>
+              Responsible NASA Official:
+              <span class="text-gray-400">Abigail Bowman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+ <script src="jawa.js"></script>
+</body>
+</html>
