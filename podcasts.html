@@ -25,11 +25,11 @@
   <header class="bg-black w-full relative z-50">
   <div class="relative flex items-center justify-between h-[80px] px-8">
 
-    <div class="flex items-center gap-4 z-10">
+   <div class="flex items-center gap-4 z-10">
       <button class="flex items-center gap-[10px] text-white hover:opacity-75 transition-opacity">
         <span class="text-[18px] font-bold leading-none tracking-wide">Explore</span>
-        <span class="flex items-center justify-center w-[26px] h-[26px] rounded-full border-2 border-white/60 flex-shrink-0">
-          <svg class="w-[12px] h-[12px] text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <span class="flex items-center justify-center w-5 h-5 rounded-full border border-white/60 flex-shrink-0">
+          <svg class="w-[10px] h-[10px] text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
           </svg>
         </span>
@@ -38,14 +38,15 @@
         <input
           type="text"
           placeholder="Search"
-          class="bg-transparent border border-white/40 text-white placeholder-white/50 text-[14px] px-4 py-[7px] w-[240px] focus:outline-none focus:border-white rounded-none"
+          class="bg-transparent border border-white/40 text-white placeholder-white/50 text-[14px] px-4 py-[4px] w-[200px] focus:outline-none focus:border-white rounded-none"
         />
       </div>
+    
     </div>
 
     <div class="absolute inset-x-0 top-0 h-full flex items-center justify-center pointer-events-none">
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg"
+        src="img/podcasts/nasa-logo.svg"
         alt="NASA"
         class="h-[62px] w-[62px] object-contain pointer-events-auto"
       />
@@ -137,7 +138,7 @@
   <div class="mt-40 px-8 pb-16 grid grid-cols-1 md:grid-cols-4 gap-6">
     
     <div class="flex flex-col">
-      <img src="img/podcasts 1.png" alt="Houston We Have a Podcast" class="w-full aspect-square object-cover" />
+      <img src="img/podcasts/podcasts 1.png" alt="Houston We Have a Podcast" class="w-full aspect-square object-cover" />
       <h2 class="text-[24px] font-extrabold text-black mt-4 leading-normal tracking-wide">Houston We Have a Podcast</h2>
       <div class="flex items-center gap-1.5 text-gray-500 text-[11px] font-bold tracking-widest mt-2 uppercase">
         <svg class="w-[14px] h-[14px]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
@@ -153,7 +154,7 @@
     </div>
 
     <div class="flex flex-col">
-      <img src="img/podcasts 2.png" alt="NASA's Curious Universe" class="w-full aspect-square object-cover" />
+      <img src="img/podcasts/podcasts 2.png" alt="NASA's Curious Universe" class="w-full aspect-square object-cover" />
       <h2 class="text-[24px] font-extrabold text-black mt-4 leading-normal tracking-wide">NASA's Curious Universe</h2>
       <div class="flex items-center gap-1.5 text-gray-500 text-[11px] font-bold tracking-widest mt-2 uppercase">
         <svg class="w-[14px] h-[14px]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
@@ -169,7 +170,7 @@
     </div>
 
     <div class="flex flex-col">
-      <img src="img/podcasts 3.png" alt="Small Steps, Giant Leaps" class="w-full aspect-square object-cover" />
+      <img src="img/podcasts/podcasts 3.png" alt="Small Steps, Giant Leaps" class="w-full aspect-square object-cover" />
       <h2 class="text-[24px] font-extrabold text-black mt-4 leading-normal tracking-wide">Small Steps, Giant Leaps</h2>
       <div class="flex items-center gap-1.5 text-gray-500 text-[11px] font-bold tracking-widest mt-2 uppercase">
         <svg class="w-[14px] h-[14px]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
@@ -185,7 +186,7 @@
     </div>
 
     <div class="flex flex-col">
-      <img src="img/podcasts 4.png" alt="Universo curioso de la NASA" class="w-full aspect-square object-cover" />
+      <img src="img/podcasts/podcasts 4.png" alt="Universo curioso de la NASA" class="w-full aspect-square object-cover" />
       <h2 class="text-[24px] font-extrabold text-black mt-4 leading-normal tracking-wide">Universo curioso de la NASA</h2>
       <div class="flex items-center gap-1.5 text-gray-500 text-[11px] font-bold tracking-widest mt-2 uppercase">
         <svg class="w-[14px] h-[14px]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
@@ -206,9 +207,9 @@
     >
       <div class="max-w-[1320px] mx-auto px-8">
         <img
-          src="img/nasa-logo.svg"
+          src="img/podcasts/nasa-logo.svg"
           alt="NASA Logo"
-          class="w-[60px] h-[60px] object-contain mb-[32px]"
+          class="w-[60px] h-[60px] object-contain mb-[32px]" 
         />
 
         <div class="grid grid-cols-1 xl:grid-cols-12 gap-12 pb-[60px]">
@@ -353,22 +354,28 @@
               >
 
               <div class="flex items-center gap-[10px]">
-                <a href="#" class="w-[32px] h-[32px] hover:opacity-80 flex items-center justify-center transition-opacity">
-                  <img src="img/landing_page/fb.png" alt="Facebook" class="w-[30px] h-[30px]">
-                </a>
+  
+  <a href="#" class="w-[32px] h-[32px] bg-[#212121] rounded-full flex items-center justify-center hover:bg-[#333333] transition-colors">
+    <img src="img/podcasts/fb.png" alt="Facebook" class="w-[16px] h-[16px] object-contain opacity-60">
+  </a>
 
-                <a href="#" class="w-[32px] h-[32px] hover:opacity-80 flex items-center justify-center transition-opacity">
-                  <img src="img/landing_page/ig.png" alt="Instagram" class="w-[30px] h-[30px]">
-                </a>
+ 
+  <a href="#" class="w-[32px] h-[32px] bg-[#212121] rounded-full flex items-center justify-center hover:bg-[#333333] transition-colors">
+    <img src="img/podcasts/ig.png" alt="Instagram" class="w-[16px] h-[16px] object-contain opacity-60">
+  </a>
 
-                <a href="#" class="w-[32px] h-[32px] hover:bg-white/10 flex items-center justify-center transition-colors">
-                  <img src="img/landing_page/x.png" alt="X" class="w-[30px] h-[30px]">
-                </a>
+  
+  <a href="#" class="w-[32px] h-[32px] bg-[#212121] rounded-full flex items-center justify-center hover:bg-[#333333] transition-colors">
+    <img src="img/podcasts/x.png" alt="X" class="w-[14px] h-[14px] object-contain opacity-60">
+  </a>
 
-                <a href="#" class="w-[32px] h-[32px] hover:opacity-80 flex items-center justify-center transition-opacity">
-                  <img src="img/landing_page/yt.png" alt="YouTube" class="w-[30px] h-[30px]">
-                </a>
-              </div>
+  
+  <a href="#" class="w-[32px] h-[32px] bg-[#212121] rounded-full flex items-center justify-center hover:bg-[#333333] transition-colors overflow-hidden">
+  <img 
+    src="img/podcasts/yt.png" alt="YouTube"  class="w-[20px] h-[20px] object-contain opacity-60 transform translate-x-[1px] translate-y-[3px]"
+  >
+</a>
+</div>
 
               <a
                 href="#"
